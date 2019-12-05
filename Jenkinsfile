@@ -25,7 +25,9 @@ pipeline {
 
       stage('Build and Push Image') {
          steps {
+           sh 'docker login --username=sreddy31 --password=Google123'
            sh 'docker image build -t ${REPOSITORY_TAG} .'
+           sh 'docker push ${REPOSITORY_TAG}'
          }
       }
 
