@@ -19,7 +19,7 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh '''/opt/maven/apache-maven-3.6.1/bin/mvn clean package'''
+            sh '''mvn clean package'''
          }
       }
 
